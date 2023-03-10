@@ -1,10 +1,12 @@
 import os
 import json
 import subprocess
+import shutil
+from copy import deepcopy
 
 geth_evm_path = "/Users/guruprasad/Documents/Programming/Ethereum/go-ethereum/build/bin/evm"
 
-output_base_dir = "/Users/guruprasad/Documents/Programming/Ethereum/execution-specs/.vscode/evm_tools_generated_testdata"
+base_dir = "/Users/guruprasad/Documents/Programming/Ethereum/t8n_testdata"
 
 forks = [
     "Frontier",
@@ -30,11 +32,11 @@ def get_args(testdata, fork, extra_params=None):
     args = [
         "t8n",
         "--input.alloc",
-        f".vscode/evm_tools_generated_testdata/{testdata}/alloc.json",
+        f"__BASEDIR__/fixtures/testdata/{testdata}/alloc.json",
         "--input.env",
-        f".vscode/evm_tools_generated_testdata/{testdata}/env.json",
+        f"__BASEDIR__/fixtures/testdata/{testdata}/env.json",
         "--input.txs",
-        f".vscode/evm_tools_generated_testdata/{testdata}/txs.json",
+        f"__BASEDIR__/fixtures/testdata/{testdata}/txs.json",
     ]
 
     args += ["--state.fork", fork] + extra_params
@@ -43,7 +45,7 @@ def get_args(testdata, fork, extra_params=None):
 
 
 def get_testdata():
-    test_dirs = [f.path for f in os.scandir(output_base_dir) if f.is_dir()]
+    test_dirs = [f.path for f in os.scandir(os.path.join(base_dir, "fixtures", "testdata")) if f.is_dir()]
     testdata = []
     for test_dir in test_dirs:
         try:
@@ -57,10 +59,24 @@ def get_testdata():
 
 def main():
 
+    expected_path = os.path.join("fixtures", "expected")
+    commands_path = "commands.json"
+
+    if os.path.exists(commands_path):
+        os.remove(commands_path)
+
+    if os.path.exists(expected_path):
+        shutil.rmtree(expected_path)
+
+    os.mkdir(expected_path)
+
+    cmds = {}
     for testdata in get_testdata():
         for fork in forks:
 
-            output_dir = os.path.join(output_base_dir, "expected", str(testdata))
+            parameters = {}
+
+            output_dir = os.path.join(expected_path, str(testdata))
             output_file = os.path.join(output_dir, f"{fork}.json")
             output_file_alloc = os.path.join(output_dir, f"{fork}_alloc.json")
             output_file_result = os.path.join(output_dir, f"{fork}_result.json")
@@ -69,14 +85,27 @@ def main():
                 os.makedirs(output_dir)
 
             args = get_args(testdata, fork)
-            subprocess_args = [geth_evm_path] + args + ["--output.alloc", output_file_alloc, "--output.result", output_file_result]
+            parameters["args"] = args
+            subprocess_args = [geth_evm_path]
+            for arg in args:
+                if "__BASEDIR__" in arg:
+                    subprocess_args.append(arg.replace("__BASEDIR__", base_dir))
+                else:
+                    subprocess_args.append(arg)
+                
+            subprocess_args += ["--output.alloc", output_file_alloc, "--output.result", output_file_result]
 
             # Run subprocess hide the output and capture only the error
             subproc_run = subprocess.run(subprocess_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
             if subproc_run.returncode:
                 print(testdata, fork, subproc_run.stderr.decode("utf-8"))
+                parameters["success"] = False
+                cmds[output_file] = deepcopy(parameters)
                 continue
+
+            parameters["success"] = True
+            cmds[output_file] = deepcopy(parameters)
 
             with open(output_file_alloc, "r") as f:
                 alloc = json.load(f)
@@ -87,8 +116,6 @@ def main():
             output = {}
             output["alloc"] = alloc
             output["result"] = result
-            output["args"] = args
-            output["expected"] = output_file
 
             with open(output_file, "w") as f:
                 json.dump(output, f, indent=4)
@@ -96,6 +123,9 @@ def main():
 
             os.remove(output_file_alloc)
             os.remove(output_file_result)
+
+    with open(commands_path, "w") as f:
+        json.dump(cmds, f, indent=4)
 
 
 if __name__ == "__main__":
