@@ -277,7 +277,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/11/Berlin.json": {
         "args": [
@@ -445,7 +445,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/7/Berlin.json": {
         "args": [
@@ -613,7 +613,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/1/Berlin.json": {
         "args": [
@@ -781,7 +781,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/10/Berlin.json": {
         "args": [
@@ -949,7 +949,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/19/Berlin.json": {
         "args": [
@@ -1621,7 +1621,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/23/Berlin.json": {
         "args": [
@@ -1957,7 +1957,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/3/Berlin.json": {
         "args": [
@@ -2293,7 +2293,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/2/Berlin.json": {
         "args": [
@@ -2629,7 +2629,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/5/Berlin.json": {
         "args": [
@@ -2797,7 +2797,7 @@
             "--state.fork",
             "MuirGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/14/Berlin.json": {
         "args": [
