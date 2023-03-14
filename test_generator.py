@@ -23,6 +23,10 @@ forks = [
     "GrayGlacier",
 ]
 
+extra_params_dict = {
+    5: ["--state.reward", "128"]
+}
+
 
 def get_args(testdata, fork, extra_params=None):
 
@@ -84,7 +88,13 @@ def main():
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
 
-            args = get_args(testdata, fork)
+            if testdata in extra_params_dict:
+                extra_params = extra_params_dict[testdata]
+            else:
+                extra_params = None
+
+
+            args = get_args(testdata, fork, extra_params)
             parameters["args"] = args
             subprocess_args = [geth_evm_path]
             for arg in args:

@@ -2529,7 +2529,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "Frontier"
+            "Frontier",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2543,7 +2545,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "Homestead"
+            "Homestead",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2557,7 +2561,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "EIP150"
+            "EIP150",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2571,7 +2577,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "EIP158"
+            "EIP158",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2585,7 +2593,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "Byzantium"
+            "Byzantium",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2599,7 +2609,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "Constantinople"
+            "Constantinople",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2613,7 +2625,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "Istanbul"
+            "Istanbul",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2627,7 +2641,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "MuirGlacier"
+            "MuirGlacier",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2641,7 +2657,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "Berlin"
+            "Berlin",
+            "--state.reward",
+            "128"
         ],
         "success": true
     },
@@ -2655,7 +2673,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "London"
+            "London",
+            "--state.reward",
+            "128"
         ],
         "success": false
     },
@@ -2669,7 +2689,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "ArrowGlacier"
+            "ArrowGlacier",
+            "--state.reward",
+            "128"
         ],
         "success": false
     },
@@ -2683,7 +2705,9 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/5/txs.json",
             "--state.fork",
-            "GrayGlacier"
+            "GrayGlacier",
+            "--state.reward",
+            "128"
         ],
         "success": false
     },
