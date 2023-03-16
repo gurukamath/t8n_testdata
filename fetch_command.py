@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument("--testdata", dest="testdata", type=int, required=True)
+parser.add_argument("--fork", dest="fork", type=str, required=True)
 
 if __name__ == "__main__":
     options = parser.parse_args()
@@ -14,7 +15,7 @@ if __name__ == "__main__":
     with open("commands.json", "r") as f:
         cmds = json.load(f)
 
-    key = f"fixtures/expected/{options.testdata}/London.json"
+    key = f"fixtures/expected/{options.testdata}/{options.fork}.json"
 
     if key in cmds:
         value_list = cmds[key]
