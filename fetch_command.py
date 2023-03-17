@@ -23,7 +23,7 @@ if __name__ == "__main__":
         for value in value_list["args"]:
             cmd += " "
             if "__BASEDIR__" in value:
-                cmd += value.replace("__BASEDIR__", "/Users/guruprasad/Documents/Programming/Ethereum/t8n_testdata")
+                cmd += value.replace("__BASEDIR__", "../t8n_testdata")
             else:
                 cmd += value
     else:

@@ -4,9 +4,9 @@ import subprocess
 import shutil
 from copy import deepcopy
 
-geth_evm_path = "/Users/guruprasad/Documents/Programming/Ethereum/go-ethereum/build/bin/evm"
+geth_evm_path = "../go-ethereum/build/bin/evm"
 
-base_dir = "/Users/guruprasad/Documents/Programming/Ethereum/t8n_testdata"
+base_dir = "."
 
 forks = [
     "Frontier",

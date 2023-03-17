@@ -137,7 +137,7 @@
             "--state.fork",
             "London"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/9/ArrowGlacier.json": {
         "args": [
@@ -151,7 +151,7 @@
             "--state.fork",
             "ArrowGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/9/GrayGlacier.json": {
         "args": [
@@ -165,7 +165,7 @@
             "--state.fork",
             "GrayGlacier"
         ],
-        "success": false
+        "success": true
     },
     "fixtures/expected/11/Frontier.json": {
         "args": [
