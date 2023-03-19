@@ -1,6 +1,6 @@
-import os
-import json
 import argparse
+import json
+import os
 
 parser = argparse.ArgumentParser(
     formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -30,5 +30,3 @@ if __name__ == "__main__":
         sys.exit(f"Command for {key} not found.")
 
     print(cmd)
-
-    

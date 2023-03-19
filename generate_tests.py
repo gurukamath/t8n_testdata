@@ -1,8 +1,9 @@
-import os
 import json
-import subprocess
+import os
 import shutil
+import subprocess
 from copy import deepcopy
+from typing import Any
 
 geth_evm_path = "../go-ethereum/build/bin/evm"
 
@@ -23,12 +24,10 @@ forks = [
     "GrayGlacier",
 ]
 
-extra_params_dict = {
-    5: ["--state.reward", "128"]
-}
+extra_params_dict = {5: ["--state.reward", "128"]}
 
 
-def get_args(testdata, fork, extra_params=None):
+def get_args(testdata: int, fork: str, extra_params: Any = None) -> Any:
 
     if extra_params is None:
         extra_params = []
@@ -48,8 +47,12 @@ def get_args(testdata, fork, extra_params=None):
     return args
 
 
-def get_testdata():
-    test_dirs = [f.path for f in os.scandir(os.path.join(base_dir, "fixtures", "testdata")) if f.is_dir()]
+def get_testdata() -> Any:
+    test_dirs = [
+        f.path
+        for f in os.scandir(os.path.join(base_dir, "fixtures", "testdata"))
+        if f.is_dir()
+    ]
     testdata = []
     for test_dir in test_dirs:
         try:
@@ -60,8 +63,7 @@ def get_testdata():
     return testdata
 
 
-
-def main():
+def main() -> None:
 
     expected_path = os.path.join("fixtures", "expected")
     commands_path = "commands.json"
@@ -83,7 +85,9 @@ def main():
             output_dir = os.path.join(expected_path, str(testdata))
             output_file = os.path.join(output_dir, f"{fork}.json")
             output_file_alloc = os.path.join(output_dir, f"{fork}_alloc.json")
-            output_file_result = os.path.join(output_dir, f"{fork}_result.json")
+            output_file_result = os.path.join(
+                output_dir, f"{fork}_result.json"
+            )
 
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
@@ -93,20 +97,28 @@ def main():
             else:
                 extra_params = None
 
-
             args = get_args(testdata, fork, extra_params)
             parameters["args"] = args
             subprocess_args = [geth_evm_path]
             for arg in args:
                 if "__BASEDIR__" in arg:
-                    subprocess_args.append(arg.replace("__BASEDIR__", base_dir))
+                    subprocess_args.append(
+                        arg.replace("__BASEDIR__", base_dir)
+                    )
                 else:
                     subprocess_args.append(arg)
-                
-            subprocess_args += ["--output.alloc", output_file_alloc, "--output.result", output_file_result]
+
+            subprocess_args += [
+                "--output.alloc",
+                output_file_alloc,
+                "--output.result",
+                output_file_result,
+            ]
 
             # Run subprocess hide the output and capture only the error
-            subproc_run = subprocess.run(subprocess_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            subproc_run = subprocess.run(
+                subprocess_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+            )
 
             if subproc_run.returncode:
                 print(testdata, fork, subproc_run.stderr.decode("utf-8"))
@@ -130,7 +142,6 @@ def main():
             with open(output_file, "w") as f:
                 json.dump(output, f, indent=4)
 
-
             os.remove(output_file_alloc)
             os.remove(output_file_result)
 
@@ -140,4 +151,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
