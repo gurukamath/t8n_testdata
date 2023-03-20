@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import sys
 
 parser = argparse.ArgumentParser(
     formatter_class=argparse.RawDescriptionHelpFormatter,

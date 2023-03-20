@@ -3,7 +3,7 @@ import os
 import shutil
 import subprocess
 from copy import deepcopy
-from typing import Any
+from typing import Any, List, Optional
 
 geth_evm_path = "../go-ethereum/build/bin/evm"
 
@@ -27,7 +27,9 @@ forks = [
 extra_params_dict = {5: ["--state.reward", "128"]}
 
 
-def get_args(testdata: int, fork: str, extra_params: Any = None) -> Any:
+def get_args(
+    testdata: int, fork: str, extra_params: Optional[List[str]] = None
+) -> Any:
 
     if extra_params is None:
         extra_params = []
@@ -78,6 +80,7 @@ def main() -> None:
 
     cmds = {}
     for testdata in get_testdata():
+        extra_params: Optional[List[str]] = None
         for fork in forks:
 
             parameters = {}
@@ -94,8 +97,6 @@ def main() -> None:
 
             if testdata in extra_params_dict:
                 extra_params = extra_params_dict[testdata]
-            else:
-                extra_params = None
 
             args = get_args(testdata, fork, extra_params)
             parameters["args"] = args
