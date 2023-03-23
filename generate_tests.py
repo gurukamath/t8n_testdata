@@ -28,10 +28,6 @@ forks = [
 
 extra_params_dict = {5: ["--state.reward", "128"]}
 
-ignore_tests = [
-    "fixtures/expected/26/Merge.json",
-]
-
 
 def get_args(
     testdata: int, fork: str, extra_params: Optional[List[str]] = None
@@ -94,8 +90,6 @@ def main() -> None:
             output_dir = os.path.join(expected_path, str(testdata))
             output_file = os.path.join(output_dir, f"{fork}.json")
 
-            if output_file in ignore_tests:
-                continue
             output_file_alloc = os.path.join(output_dir, f"{fork}_alloc.json")
             output_file_result = os.path.join(
                 output_dir, f"{fork}_result.json"

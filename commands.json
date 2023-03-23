@@ -1343,6 +1343,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/26/Merge.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/26/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/26/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/26/txs.json",
+            "--state.fork",
+            "Merge"
+        ],
+        "success": true
+    },
     "fixtures/expected/26/Shanghai.json": {
         "args": [
             "t8n",
