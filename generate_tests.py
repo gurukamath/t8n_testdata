@@ -22,6 +22,7 @@ forks = [
     "London",
     "ArrowGlacier",
     "GrayGlacier",
+    "Merge",
 ]
 
 extra_params_dict = {5: ["--state.reward", "128"]}
