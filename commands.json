@@ -181,6 +181,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/9/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/9/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/9/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/9/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/11/Frontier.json": {
         "args": [
             "t8n",
@@ -360,6 +374,20 @@
             "__BASEDIR__/fixtures/testdata/11/txs.json",
             "--state.fork",
             "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/11/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/11/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/11/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/11/txs.json",
+            "--state.fork",
+            "Shanghai"
         ],
         "success": false
     },
@@ -545,6 +573,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/7/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/7/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/7/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/7/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/1/Frontier.json": {
         "args": [
             "t8n",
@@ -724,6 +766,20 @@
             "__BASEDIR__/fixtures/testdata/1/txs.json",
             "--state.fork",
             "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/1/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/1/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/1/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/1/txs.json",
+            "--state.fork",
+            "Shanghai"
         ],
         "success": false
     },
@@ -909,6 +965,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/10/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/10/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/10/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/10/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/19/Frontier.json": {
         "args": [
             "t8n",
@@ -1091,6 +1161,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/19/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/19/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/19/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/19/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/26/Frontier.json": {
         "args": [
             "t8n",
@@ -1259,7 +1343,7 @@
         ],
         "success": false
     },
-    "fixtures/expected/26/Merge.json": {
+    "fixtures/expected/26/Shanghai.json": {
         "args": [
             "t8n",
             "--input.alloc",
@@ -1269,7 +1353,7 @@
             "--input.txs",
             "__BASEDIR__/fixtures/testdata/26/txs.json",
             "--state.fork",
-            "Merge"
+            "Shanghai"
         ],
         "success": true
     },
@@ -1455,6 +1539,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/8/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/8/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/8/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/8/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/100/Frontier.json": {
         "args": [
             "t8n",
@@ -1634,6 +1732,20 @@
             "__BASEDIR__/fixtures/testdata/100/txs.json",
             "--state.fork",
             "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/100/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/100/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/100/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/100/txs.json",
+            "--state.fork",
+            "Shanghai"
         ],
         "success": false
     },
@@ -1819,6 +1931,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/101/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/101/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/101/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/101/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/24/Frontier.json": {
         "args": [
             "t8n",
@@ -2001,6 +2127,20 @@
         ],
         "success": true
     },
+    "fixtures/expected/24/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/24/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/24/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/24/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/23/Frontier.json": {
         "args": [
             "t8n",
@@ -2180,6 +2320,20 @@
             "__BASEDIR__/fixtures/testdata/23/txs.json",
             "--state.fork",
             "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/23/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/23/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/23/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/23/txs.json",
+            "--state.fork",
+            "Shanghai"
         ],
         "success": false
     },
@@ -2365,6 +2519,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/4/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/4/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/4/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/4/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/3/Frontier.json": {
         "args": [
             "t8n",
@@ -2544,6 +2712,20 @@
             "__BASEDIR__/fixtures/testdata/3/txs.json",
             "--state.fork",
             "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/3/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/3/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/3/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/3/txs.json",
+            "--state.fork",
+            "Shanghai"
         ],
         "success": false
     },
@@ -2729,6 +2911,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/12/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/12/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/12/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/12/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/2/Frontier.json": {
         "args": [
             "t8n",
@@ -2911,6 +3107,20 @@
         ],
         "success": false
     },
+    "fixtures/expected/2/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/2/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/2/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/2/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/13/Frontier.json": {
         "args": [
             "t8n",
@@ -3090,6 +3300,20 @@
             "__BASEDIR__/fixtures/testdata/13/txs.json",
             "--state.fork",
             "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/13/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/13/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/13/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/13/txs.json",
+            "--state.fork",
+            "Shanghai"
         ],
         "success": false
     },
@@ -3301,6 +3525,22 @@
         ],
         "success": false
     },
+    "fixtures/expected/5/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/5/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/5/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/5/txs.json",
+            "--state.fork",
+            "Shanghai",
+            "--state.reward",
+            "128"
+        ],
+        "success": false
+    },
     "fixtures/expected/14/Frontier.json": {
         "args": [
             "t8n",
@@ -3480,6 +3720,20 @@
             "__BASEDIR__/fixtures/testdata/14/txs.json",
             "--state.fork",
             "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/14/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/14/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/14/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/14/txs.json",
+            "--state.fork",
+            "Shanghai"
         ],
         "success": false
     }
