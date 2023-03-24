@@ -3,7 +3,7 @@ import os
 import shutil
 import subprocess
 from copy import deepcopy
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 geth_evm_path = "../go-ethereum/build/bin/evm"
 
@@ -27,6 +27,15 @@ forks = [
 ]
 
 extra_params_dict = {5: ["--state.reward", "128"]}
+
+
+def set_base_dir(args: Any, subprocess_args: Any) -> None:
+    """Set the base directory for the testdata"""
+    for arg in args:
+        if "__BASEDIR__" in arg:
+            subprocess_args.append(arg.replace("__BASEDIR__", base_dir))
+        else:
+            subprocess_args.append(arg)
 
 
 def get_args(
@@ -80,74 +89,87 @@ def main() -> None:
 
     os.mkdir(expected_path)
 
-    cmds = {}
+    auto_commands: Dict[Any, Any] = {}
     for testdata in get_testdata():
         extra_params: Optional[List[str]] = None
         for fork in forks:
 
-            parameters = {}
+            parameters: Dict[Any, Any] = {}
 
             output_dir = os.path.join(expected_path, str(testdata))
             output_file = os.path.join(output_dir, f"{fork}.json")
 
-            output_file_alloc = os.path.join(output_dir, f"{fork}_alloc.json")
-            output_file_result = os.path.join(
-                output_dir, f"{fork}_result.json"
-            )
+            # output_file_alloc = os.path.join(output_dir, f"{fork}_alloc.json")
+            # output_file_result = os.path.join(
+            #     output_dir, f"{fork}_result.json"
+            # )
 
-            if not os.path.exists(output_dir):
-                os.makedirs(output_dir)
+            # if not os.path.exists(output_dir):
+            #     os.makedirs(output_dir)
 
             if testdata in extra_params_dict:
                 extra_params = extra_params_dict[testdata]
 
             args = get_args(testdata, fork, extra_params)
-            parameters["args"] = args
-            subprocess_args = [geth_evm_path]
-            for arg in args:
-                if "__BASEDIR__" in arg:
-                    subprocess_args.append(
-                        arg.replace("__BASEDIR__", base_dir)
-                    )
-                else:
-                    subprocess_args.append(arg)
+            auto_commands[output_file] = {}
+            auto_commands[output_file]["args"] = args
 
-            subprocess_args += [
-                "--output.alloc",
-                output_file_alloc,
-                "--output.result",
-                output_file_result,
-            ]
+    with open("custom_tests.json", "r") as f:
+        custom_commands = json.load(f)
 
-            # Run subprocess hide the output and capture only the error
-            subproc_run = subprocess.run(
-                subprocess_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE
-            )
+    all_commands = {**auto_commands, **custom_commands}
+    cmds = {}
 
-            if subproc_run.returncode:
-                print(testdata, fork, subproc_run.stderr.decode("utf-8"))
-                parameters["success"] = False
-                cmds[output_file] = deepcopy(parameters)
-                continue
+    for output_file, arguments in all_commands.items():
+        parameters = {}
+        parameters = arguments
 
-            parameters["success"] = True
+        subprocess_args = [geth_evm_path]
+        set_base_dir(arguments["args"], subprocess_args)
+
+        output_file_alloc = output_file.replace(".json", "_alloc.json")
+        output_file_result = output_file.replace(".json", "_result.json")
+        output_dir = os.path.dirname(output_file)
+
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        subprocess_args += [
+            "--output.alloc",
+            output_file_alloc,
+            "--output.result",
+            output_file_result,
+        ]
+
+        # Run subprocess hide the output and capture only the error
+        subproc_run = subprocess.run(
+            subprocess_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        )
+
+        if subproc_run.returncode:
+            print(testdata, fork, subproc_run.stderr.decode("utf-8"))
+            parameters["success"] = False
             cmds[output_file] = deepcopy(parameters)
+            continue
 
-            with open(output_file_alloc, "r") as f:
-                alloc = json.load(f)
+        parameters["success"] = True
+        cmds[output_file] = deepcopy(parameters)
 
-            with open(output_file_result, "r") as f:
-                result = json.load(f)
+        with open(output_file_alloc, "r") as f:
+            alloc = json.load(f)
 
-            output = {}
-            output["alloc"] = alloc
-            output["result"] = result
+        with open(output_file_result, "r") as f:
+            result = json.load(f)
 
-            with open(output_file, "w") as f:
-                json.dump(output, f, indent=4)
+        output = {}
+        output["alloc"] = alloc
+        output["result"] = result
 
-            os.remove(output_file_alloc)
-            os.remove(output_file_result)
+        with open(output_file, "w") as f:
+            json.dump(output, f, indent=4)
+
+        os.remove(output_file_alloc)
+        os.remove(output_file_result)
 
     with open(commands_path, "w") as f:
         json.dump(cmds, f, indent=4)
