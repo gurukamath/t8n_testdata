@@ -11,6 +11,57 @@
             "--state.fork",
             "HomesteadToDaoAt5"
         ]
+    },
+    "fixtures/expected/13/London_txs_rlp.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/13/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/13/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/13/signed_txs.rlp",
+            "--state.fork",
+            "London"
+        ]
+    },
+    "fixtures/expected/9/London_txs_rlp.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/9/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/9/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/9/signed_txs.rlp",
+            "--state.fork",
+            "London"
+        ]
+    },
+    "fixtures/expected/8/Berlin_txs_rlp.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/8/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/8/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/8/signed_txs.rlp",
+            "--state.fork",
+            "Berlin"
+        ]
+    },
+    "fixtures/expected/2/Byzantium_txs_rlp.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/2/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/2/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/2/signed_txs.rlp",
+            "--state.fork",
+            "Byzantium"
+        ]
     }
-
 }
