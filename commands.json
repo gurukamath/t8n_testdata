@@ -1,4 +1,200 @@
 {
+    "fixtures/expected/102/Frontier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Frontier"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/Homestead.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Homestead"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/EIP150.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "EIP150"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/EIP158.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "EIP158"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/Byzantium.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Byzantium"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/Constantinople.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Constantinople"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/Istanbul.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Istanbul"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/MuirGlacier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "MuirGlacier"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/Berlin.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Berlin"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/London.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "London"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/ArrowGlacier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "ArrowGlacier"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/GrayGlacier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "GrayGlacier"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/Merge.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Merge"
+        ],
+        "success": false
+    },
+    "fixtures/expected/102/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/9/Frontier.json": {
         "args": [
             "t8n",
@@ -3751,6 +3947,202 @@
         ],
         "success": false
     },
+    "fixtures/expected/25/Frontier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Frontier"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/Homestead.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Homestead"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/EIP150.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "EIP150"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/EIP158.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "EIP158"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/Byzantium.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Byzantium"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/Constantinople.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Constantinople"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/Istanbul.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Istanbul"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/MuirGlacier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "MuirGlacier"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/Berlin.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Berlin"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/London.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "London"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/ArrowGlacier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "ArrowGlacier"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/GrayGlacier.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "GrayGlacier"
+        ],
+        "success": false
+    },
+    "fixtures/expected/25/Merge.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Merge"
+        ],
+        "success": true
+    },
+    "fixtures/expected/25/Shanghai.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/25/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/25/env.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/25/txs.json",
+            "--state.fork",
+            "Shanghai"
+        ],
+        "success": false
+    },
     "fixtures/expected/7/HomesteadToDaoAt5.json": {
         "args": [
             "t8n",
@@ -3818,6 +4210,20 @@
             "__BASEDIR__/fixtures/testdata/2/signed_txs.rlp",
             "--state.fork",
             "Byzantium"
+        ],
+        "success": true
+    },
+    "fixtures/expected/102/London_on_fork.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env_on_fork.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "BerlinToLondonAt5"
         ],
         "success": true
     }

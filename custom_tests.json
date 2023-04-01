@@ -63,5 +63,18 @@
             "--state.fork",
             "Byzantium"
         ]
+    },
+    "fixtures/expected/102/London_on_fork.json": {
+        "args": [
+            "t8n",
+            "--input.alloc",
+            "__BASEDIR__/fixtures/testdata/102/alloc.json",
+            "--input.env",
+            "__BASEDIR__/fixtures/testdata/102/env_on_fork.json",
+            "--input.txs",
+            "__BASEDIR__/fixtures/testdata/102/txs.json",
+            "--state.fork",
+            "BerlinToLondonAt5"
+        ]
     }
 }
